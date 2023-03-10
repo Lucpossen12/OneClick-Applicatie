@@ -1,0 +1,18 @@
+const GenesisDevice = require('genesis-device');
+const genesis = new GenesisDevice();
+
+// const prompt = require('prompt-sync')();
+// const hostnameMachine = prompt('Hostname van de machine?');
+
+genesis.addVariable('dc02_vm_params', {
+    default: {
+        hostname: hostnameMachine,
+        vcpu: '3',
+        ram: '8000',
+        disk_datastore: 'ssd',
+        disk_size: '100',
+    }
+}, [
+  'Parameter deploy DC 2',
+]);
+
